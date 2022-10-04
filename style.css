@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: khaki;
+    color: darkslategray;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1fr, 4);
+    grid-template-rows: repeat(1fr, 6);
+    grid-template-areas: 
+    "dis dis dis dis"
+    "AC C div times"
+    "seven eight nine minus"
+    "four five six plus"
+    "one two three equal"
+    "zero zero dot equal"
+    ;
+}
+.zero {
+    grid-area: zero;
+}
+.equal {
+    grid-area: equal;
+}
+.dis {
+    grid-area: dis;
+    background-color: black;
+    color: chartreuse;
+    text-align: right;
+    padding: 1em 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+button {
+    width: 100%;
+    height: 100%;
+}
+
+.padButton button {
+    padding: 1em;
+    opacity: .7;
+    border:1px solid;
+    cursor: pointer;
+    font-size: x-large;
+    background-color: greenyellow;
+    animation: scale 1s ease-in-out;
+}
+@keyframes scale {
+	from {
+		transform: scale(0.99);
+	}
+	to {
+		transform: scale(1.0);
+	}
+}
+
+.operators {
+    opacity: .5;
+}
+
+#equals {
+    opacity: .3;
+}
+#clear {
+    background-color: brown;
+}
+.C {
+    background-color: brown;
+    opacity: .4;
+}
+
+.dis input {
+    color: blue;
+}
+
+.total {
+    padding: .2em .3em;
+    color: blue;
+}
